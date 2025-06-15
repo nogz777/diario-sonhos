@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Novo Sonho</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="supabaseClient.js"></script>
+  <script src="js/crud.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h2>✍️ Novo Sonho</h2>
+    <input id="titulo" placeholder="Título">
+    <textarea id="descricao" placeholder="Descreva o sonho..."></textarea>
+    <select id="tipo">
+      <option value="bom">Bom</option>
+      <option value="confuso">Confuso</option>
+      <option value="pesadelo">Pesadelo</option>
+    </select>
+    <input id="humor" placeholder="Como você se sentiu?">
+    <input type="date" id="data">
+    <button onclick="criarSonho()">Salvar</button>
+  </div>
+</body>
+</html>

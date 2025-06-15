@@ -2,25 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Novo Sonho</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script src="supabaseClient.js"></script>
-  <script src="js/crud.js" defer></script>
+  <script type="module" src="js/crud.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h2>✍️ Novo Sonho</h2>
-    <input id="titulo" placeholder="Título">
-    <textarea id="descricao" placeholder="Descreva o sonho..."></textarea>
-    <select id="tipo">
-      <option value="bom">Bom</option>
-      <option value="confuso">Confuso</option>
-      <option value="pesadelo">Pesadelo</option>
-    </select>
-    <input id="humor" placeholder="Como você se sentiu?">
-    <input type="date" id="data">
-    <button onclick="criarSonho()">Salvar</button>
+    <h1>✍️ Novo Sonho</h1>
+    <form id="novo-sonho-form">
+      <input type="text" id="titulo" placeholder="Título" required />
+      <textarea id="descricao" placeholder="Descrição" required></textarea>
+      <select id="tipo">
+        <option value="bom">Bom</option>
+        <option value="confuso">Confuso</option>
+        <option value="pesadelo">Pesadelo</option>
+      </select>
+      <select id="humor">
+        <option value="feliz">Feliz</option>
+        <option value="triste">Triste</option>
+        <option value="ansioso">Ansioso</option>
+      </select>
+      <input type="date" id="data" required />
+      <button type="submit" class="btn">Salvar</button>
+    </form>
   </div>
 </body>
 </html>

@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login - Diário dos Sonhos</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script src="supabaseClient.js"></script>
-  <script src="js/auth.js" defer></script>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/auth.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h2>🌙 Entrar</h2>
-    <input type="email" id="email" placeholder="Seu e-mail">
-    <input type="password" id="password" placeholder="Senha">
-    <button onclick="login()">Entrar</button>
-    <a href="cadastro.html" class="link">Criar uma nova conta</a>
+    <h1>🔑 Entrar</h1>
+    <form id="login-form">
+      <input type="email" id="email-login" placeholder="E-mail" required />
+      <input type="password" id="password-login" placeholder="Senha" required />
+      <button type="submit" class="btn">Entrar</button>
+    </form>
+    <p>Não tem conta? <a href="cadastro.html">Cadastrar</a></p>
   </div>
 </body>
 </html>

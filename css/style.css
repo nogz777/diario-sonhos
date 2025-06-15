@@ -1,67 +1,65 @@
-:root {
-  --bg: #F6F8FC;
-  --card: #ffffff;
-  --accent: #C7D2FE;
-  --text: #1e293b;
-  --muted: #64748B;
-  --shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  --radius: 16px;
-  --transition: all 0.3s ease;
-}
-
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background: #F6F8FC;
+  color: #374151;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 24px;
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-h1, h2 {
-  color: var(--text);
-}
-
-input, select, textarea, button {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: var(--radius);
-  margin-top: 10px;
-  font-size: 16px;
-  transition: var(--transition);
-}
-
-button {
-  background: var(--accent);
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-.card {
-  background: var(--card);
-  padding: 16px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin-bottom: 16px;
-}
-
-.link {
-  color: var(--muted);
-  text-decoration: underline;
-  display: block;
-  margin-top: 10px;
   text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 400px;
+  width: 90%;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #64748B;
+}
+
+p {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #475569;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn, .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn {
+  background-color: #C7D2FE;
+  color: #1E293B;
+}
+
+.btn:hover {
+  background-color: #A5B4FC;
+}
+
+.btn-secondary {
+  background-color: #E2E8F0;
+  color: #1E293B;
+}
+
+.btn-secondary:hover {
+  background-color: #CBD5E1;
 }

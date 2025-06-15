@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Sonho</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/crud.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🛠️ Editar Sonho</h1>
+    <form id="editar-sonho-form">
+      <input type="text" id="titulo" placeholder="Título" required />
+      <textarea id="descricao" placeholder="Descrição" required></textarea>
+      <select id="tipo">
+        <option value="bom">Bom</option>
+        <option value="confuso">Confuso</option>
+        <option value="pesadelo">Pesadelo</option>
+      </select>
+      <select id="humor">
+        <option value="feliz">Feliz</option>
+        <option value="triste">Triste</option>
+        <option value="ansioso">Ansioso</option>
+      </select>
+      <input type="date" id="data" required />
+      <button type="submit" class="btn">Atualizar</button>
+    </form>
+  </div>
+</body>
+</html>

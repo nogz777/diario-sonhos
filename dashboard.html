@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Seus Sonhos - Diário</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
-  <script src="supabaseClient.js"></script>
-  <script src="js/crud.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Sonhos</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/crud.js" defer></script>
 </head>
 <body>
   <div class="container">
-    <h2>🌙 Meus Sonhos</h2>
-    <div id="lista-sonhos"></div>
-    <button onclick="window.location.href='novo.html'">➕ Novo sonho</button>
-    <button onclick="logout()" style="margin-top:10px">Sair</button>
+    <h1>🌙 Meus Sonhos</h1>
+    <button onclick="logout()" class="btn-secondary">Sair</button>
+    <a href="novo.html" class="btn">+ Novo Sonho</a>
+    <ul id="lista-sonhos"></ul>
   </div>
 </body>
 </html>

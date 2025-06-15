@@ -1,20 +1,37 @@
-async function signup() {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const { error } = await supabaseClient.auth.signUp({ email, password });
-  if (error) return alert(error.message);
-  alert('Verifique seu e-mail para confirmar o cadastro!');
+// auth.js
+
+// Cadastro
+async function signUp() {
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
+
+  const { data, error } = await supabaseClient.auth.signUp({
+    email: email,
+    password: senha,
+  });
+
+  if (error) {
+    alert("Erro no cadastro: " + error.message);
+  } else {
+    alert("Cadastro realizado com sucesso! Faça login.");
+    window.location.href = "login.html";
+  }
 }
 
-async function login() {
-  const email = document.getElementById('email').value;
-  const password = document.getElementById('password').value;
-  const { error } = await supabaseClient.auth.signInWithPassword({ email, password });
-  if (error) return alert(error.message);
-  window.location.href = 'dashboard.html';
-}
+// Login
+async function signIn() {
+  const email = document.getElementById("email").value;
+  const senha = document.getElementById("senha").value;
 
-async function logout() {
-  await supabaseClient.auth.signOut();
-  window.location.href = 'login.html';
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email: email,
+    password: senha,
+  });
+
+  if (error) {
+    alert("Erro no login: " + error.message);
+  } else {
+    localStorage.setItem("session", JSON.stringify(data.session));
+    window.location.href = "dashboard.html";
+  }
 }
